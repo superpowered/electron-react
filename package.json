@@ -1,0 +1,62 @@
+{
+    "name": "electron-react",
+    "productName": "Electron React App",
+    "version": "0.1.0",
+    "description": "An Electron app than runs off of React!",
+    "author": "Andrew Herder <andrew.herder@gmail.com>",
+    "main": "./build/electron.js",
+    "homepage": "./",
+    "repository": "https://github.com/where-your-releases-will-go-to",
+    "private": false,
+    "scripts": {
+        "dev": "nf start -p 3005",
+        "build": "npm run react-build && npm run electron-build",
+        "main": "public/electron.js",
+        "postinstall": "install-app-deps",
+        "electron-wait": "node src/electron-wait-react",
+        "electron-dev": "ELECTRON_START_URL=http://localhost:3005 electron ./public/electron.js",
+        "electron-pack": "electron-builder --em.main=build/electron.js",
+        "electron-build": "electron-builder",
+        "react-start": "BROWSER=none react-scripts start",
+        "react-eject": "react-scripts eject",
+        "react-build": "react-scripts build",
+        "react-test": "react-scripts test --env=jsdom"
+    },
+    "build": {
+        "appId": "com.electron.appname",
+        "dmg": {
+            "contents": [
+                {
+                    "x": 110,
+                    "y": 150
+                },
+                {
+                    "x": 240,
+                    "y": 150,
+                    "type": "link",
+                    "path": "/Applications"
+                }
+            ]
+        },
+        "win": {
+            "target": "NSIS",
+            "icon": "assets/icon.ico"
+        },
+        "files": [
+            "build/**/*"
+        ],
+        "directories": {
+            "buildResources": "assets"
+        }
+    },
+    "dependencies": {
+        "react": "^16.3.2",
+        "react-dom": "^16.3.2",
+        "react-scripts": "1.1.4"
+    },
+    "devDependencies": {
+        "electron": "^1.8.6",
+        "electron-builder": "^20.10.0",
+        "foreman": "^2.0.0"
+    }
+}
