@@ -28,6 +28,6 @@ Use this command to kill all tasks:
     
 ### Helpful Links:    
     
-[Electron React Setup Tutorial] (https://medium.freecodecamp.org/building-an-electron-application-with-create-react-app-97945861647c)
+[Electron React Setup Tutorial](https://medium.freecodecamp.org/building-an-electron-application-with-create-react-app-97945861647c)
 
-[Electron Builder Setup Tutorial] (https://medium.com/how-to-electron/a-complete-guide-to-packaging-your-electron-app-1bdc717d739f)
+[Electron Builder Setup Tutorial](https://medium.com/how-to-electron/a-complete-guide-to-packaging-your-electron-app-1bdc717d739f)
